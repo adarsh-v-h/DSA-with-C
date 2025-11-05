@@ -11,4 +11,16 @@ This repository is meant as a learning journal: short, well-documented programs 
 - Not a production project — educational snippets with clear comments and usage examples.
 
 ---
-
+## How to run
+The C code must be first compiled before running, here is how you can do it: <br>
+Windows
+```bash
+gcc -o filename filename.c
+filename
+```
+Linux
+```bash
+gcc -o filename filename.c
+./filename
+```
+CURRENT version: 1.0.1
