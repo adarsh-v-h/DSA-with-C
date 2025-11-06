@@ -23,4 +23,4 @@ Linux
 gcc -o filename filename.c
 ./filename
 ```
-CURRENT version: 1.0.1
+CURRENT version: 1.0.2
