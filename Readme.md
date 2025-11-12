@@ -1,7 +1,8 @@
 # DSA-Snippets
 
-Collection of small, focused DSA programs and exercises in C — each file demonstrates a single data structure / algorithm implementation (with minimal dependencies).  
-This repository is meant as a learning journal: short, well-documented programs you can compile, run, and study.
+Collection of small, focused DSA programs and exercises in C — each file demonstrates a single data structure / algorithm implementation (with minimal dependencies).
+This repository is meant as a learning journal: short, well-documented programs you can compile, run, and study. <br>
+The basic programs are in intermediate stage, now the rest of code related to Doubly Linked List, Trees and Graphs are remanining. I will update those as so as I cover them.
 
 ---
 
