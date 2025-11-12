@@ -13,7 +13,11 @@ The basic programs are in intermediate stage, now the rest of code related to Do
 
 ---
 
-## How to run
+## Getting Started
+First clone the repo to your local machine by running the following command: <br>
+```bash
+git clone https://github.com/adarsh-v-h/DSA-with-C.git
+```
 The C code must be first compiled before running, here is how you can do it: <br>
 Windows
 ```bash
