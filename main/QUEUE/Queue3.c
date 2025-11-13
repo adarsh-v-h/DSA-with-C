@@ -53,7 +53,7 @@ void Enqueue(int item){
         Rear=0;
         Front =0;
         Queue[Rear] = item;
-    }else if ((Rear+1)%N == Front){
+    }else if((Rear+1)%N == Front){
         QueueFull();
     }else{
         Rear = (Rear+1)%N;

@@ -65,7 +65,7 @@ int main(){
 void Create(){
     int value, ch, i=0;
     do{
-        struct node *newNode = malloc(sizeof(struct node));
+        struct node *newNode;
         newNode = (struct node*)malloc(sizeof(struct node));
         newNode->next = NULL;
         printf("Enter the value you want to add at the %d newNode: ", i);
@@ -175,7 +175,7 @@ void Deletion(){
     int pos;
     printf("Enter the position of the list, which you want to delete: ");
     scanf("%d", &pos);
-    if (head == NULL) { 
+    if(head == NULL) { 
         printf("List empty. Nothing to delete.\n"); 
         return; 
     }if (pos <= 0) { 

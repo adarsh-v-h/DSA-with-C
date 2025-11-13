@@ -13,7 +13,7 @@ void display(terms a[]);
 int main(){
     int p,q;
     int i,j;
-    int n=0,value,ch;
+    int n=0,value;
     printf("Enter the number of rows and columns: ");
     scanf("%d %d",&p, &q);
     a[0].row = p;

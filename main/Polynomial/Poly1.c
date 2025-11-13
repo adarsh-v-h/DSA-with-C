@@ -13,6 +13,7 @@ void padd(int,int,int,int,int*,int*);
 void attach(float,int);
 int compare(int, int);
 void display(int, int);
+
 int main(){
     int StartA=0, FinishA, StartB, FinishB, x,y, degree1, degree2, StartD=0, FinishD=0;
     int cf,i;
@@ -75,7 +76,6 @@ void padd(int StartA, int FinishA ,int StartB, int FinishB, int *StartD,int *Fin
                 break;
         }
     }
-
     // now even after all this there will be some stuff left on either Equation, they are gonna be takenn care by the following statements
     for(; StartA<=FinishA;StartA++){
         attach(terms[StartA].Coef,terms[StartA].expo);
@@ -104,7 +104,6 @@ int compare(int x, int y){
     }
     return 0;
 }
-
 
 void display(int StartD, int FinishD){
     int i;

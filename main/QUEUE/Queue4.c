@@ -44,7 +44,6 @@ int main(){
             }case 4:{
                 return 0;
             }
-        
             default:{
                 printf("Invalid input!!!\n");
                 break;
@@ -70,11 +69,11 @@ void QueueFull(){
     element *new;
     new = (element*)malloc(2*Capacity*sizeof(element));
     int Start= Front;
-    if(Start<=Rear){
+    if(Start<=Rear){ // if this is true, right now the queue hasn't been wrapped
         copy(Queue+Start, Queue+Start+Capacity-1, new);
-    }else{
+    }else{ // here the queue has the wrapped...
         // we are dividing the queue, first from front to end
-        copy(Queue+Start, Queue+ Capacity-1, new);
+        copy(Queue+Start, Queue+Capacity-1, new);
         // the second from 0 to rear
         copy(Queue, Queue+Rear, new+Capacity-Start);
     }
@@ -124,7 +123,6 @@ void display(){
         for(i = Front; i!=Rear; i = (i+1)%Capacity){
             printf("%d \n", Queue[i].key);
         }
-        // i = (i+1)%Capacity;
         printf("%d\n", Queue[i].key);
     }
 }
