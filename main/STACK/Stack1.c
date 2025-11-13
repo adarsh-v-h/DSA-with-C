@@ -6,7 +6,7 @@
 
 typedef struct{
     int key;
-} element;
+}element;
 element Stack[MAX_SIZE]; // the stack
 void push(element); // adding an element to the stack
 element pop(void); // removing an element for stack
@@ -32,26 +32,26 @@ int main(){
             scanf("%d", &item.key);
             push(item);
             break;
-        }
+            }
         case 2:{ item = pop();
             if(item.key == ERROR_CODE){
                 printf("Stack empty ... please push before popping... \n");
                 break;
             }printf("Removed %d \n", item.key);
             break;
-        }
+            }
         case 3:{
             display();
             break;
-        }
+            }
         case 4:{ printf("Ending \n");
             exit(0);
-        }
+            }
         default:{
             printf("Invalid choice.. \n");
             break;
+            }
         }
-    }
     }
     return 0;
 }

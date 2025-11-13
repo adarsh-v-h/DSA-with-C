@@ -9,7 +9,6 @@ typedef struct{
 //instead of declaring a whole stack, we will just create pointer
 element *stack;
 void push(element);
-element pop();
 void StackFull();
 element pop();
 element StackEmpty();
