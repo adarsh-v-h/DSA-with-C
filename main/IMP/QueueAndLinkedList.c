@@ -9,9 +9,9 @@ struct node{
     int data;
     struct node *next;
 };
-struct node *rear, *front;
-rear = NULL;
-front = NULL;
+struct node *rear = NULL;
+struct node *front = NULL;
+
 void EnQueue(int data);
 struct node Dequeue(void);
 struct node QueueEmpty(void);
@@ -125,7 +125,7 @@ struct node QueueEmpty(void){
 
 void display(){
     if(front==NULL){
-        printf("Queue Empyt");
+        printf("Queue Empty\n");
         return;
     }
     printf("The elements are: \n");
