@@ -1,6 +1,7 @@
 // Implementing Queue with circular LinkedList
 #include <stdio.h>
 #include <stdlib.h>
+#include "c_utils.h"
 
 #define ERROR_CODE -99999
 
@@ -9,28 +10,29 @@ struct node{
     struct node *next;
 };
 struct node *rear, *front;
-
-void EnQueue(struct node);
+rear = NULL;
+front = NULL;
+void EnQueue(int data);
 struct node Dequeue(void);
-struct node QueueEmpyt(void);
+struct node QueueEmpty(void);
 void display(void);
-void Create();
+void Create(void);
 
 int main(){
     struct node item;
-    int  ch;
+    int ch, data;
     printf("\t\tCreation of Linked List\n");
     Create();
     while(1){
         printf("The Operations you can now perform are: ");
         printf("\n1.Enqueue\n2.Dequeue\n3.DISPLAY\n4.EXIT\n");
         printf("Your choice: ");
-        scanf("%d", &ch);
+        getInt(&ch);
         switch(ch){
             case 1:{
                 printf("Enter the value to add: ");
-                if(scanf("%d", &item.data)!=1){printf("Invalid input.."); exit(1);}
-                EnQueue(item);
+                getInt(&data);
+                EnQueue(data);
                 break;
             }
             case 2:{
@@ -48,6 +50,7 @@ int main(){
             }
             case 4:{
                 printf("Thanks for using us");
+                while (front != NULL) Dequeue();
                 return 0;
             }
             default:{
@@ -62,12 +65,12 @@ int main(){
 void Create(){
     int data, ch;
     do{
-        struct node *new;
-        new = (struct node*)malloc(sizeof(struct node));
-        printf("Enter the value to be insearted: ");
-        if(scanf("%d", &data)!=1){printf("Invalid input.."); exit(1);}
+        struct node *new = (struct node*)safeAllo(sizeof(struct node));
 
+        printf("Enter the value to be insearted: ");
+        getInt(&data);
         new->data=data;
+        new->next=NULL;
         if(rear==NULL){
             rear = new;
             front = new;
@@ -77,15 +80,14 @@ void Create(){
         }
         printf("Do you want to continue to add? \n");
         printf("1 - Yes\nany digit - No\n:");
-        if(scanf("%d", &ch)!=1){printf("Invalid input.."); exit(1);}
-
+        getInt(&ch);
     }while(ch==1);
 }
 
-void EnQueue(struct node item){
+void EnQueue(int data){
     struct node *new;
-    new = (struct node*)malloc(sizeof(struct node));
-    new->data = item.data;
+    new = (struct node*)safeAllo(sizeof(struct node));
+    new->data = data;
     new->next=NULL;
     if(rear == NULL){
         rear = new;
@@ -97,12 +99,13 @@ void EnQueue(struct node item){
 }
 
 struct node Dequeue(void){
-    struct node item;
-    struct node *temp;
     if(front == NULL){
-        item.data = ERROR_CODE;
-    }else if(front == rear){
+       return (QueueEmpty()); 
+    }struct node item;
+    struct node *temp;
+    if(front == rear){
         item.data = front->data;
+        free(front);
         front = NULL;
         rear = NULL;
     }else{
@@ -111,6 +114,12 @@ struct node Dequeue(void){
         front = front->next;
         free(temp);
     }
+    return item;
+}
+struct node QueueEmpty(void){
+    struct node item;
+    item.data = ERROR_CODE;
+    item.next = NULL;
     return item;
 }
 

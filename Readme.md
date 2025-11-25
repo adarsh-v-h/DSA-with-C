@@ -31,6 +31,16 @@ gcc -o filename filename.c
 ```
 
 ---
-
+## 💫 **New Thing**
+In /main/IMP I have added few user defined libraries for testing, and they are only linked with the main/IMP/QueueAndLinkedList.c. The header file is called "c_utils", the prototypes for the fucntions are in c_utils.h and the function definitions are in c_utils.c. <br>
+To execute the program QueueAndLinkedList.c:
+```bash
+gcc -o app QueueAndLinkedList.c c_utils.c
+# for windowspowershell
+app
+#for linux or mac or windows terminals 
+./app
+```
+---
 ## Before you go
 All the programs in here, have bugs, loop holes and can be exploited, but conditions like wrong data input, overflow or underflow conditions. This whole thing is made for jusr understanding, and have a huge space to grow, into better codes.
