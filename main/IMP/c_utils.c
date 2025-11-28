@@ -7,18 +7,10 @@ void getInt(int *data) {
     int c; // For character buffer clearing
 
     do {
-        // 1. Try to read the integer
-        // Note: We don't print "Enter integer" here so you can 
-        // customize the prompt in main() before calling this.
         check = scanf("%d", data); 
-
-        // 2. If it failed (user typed "abc"), print error
         if (check != 1) {
             printf("Invalid input! Please enter a whole number: ");
         }
-        
-        // 3. CRITICAL STEP: Clear the input buffer 
-        // This eats the "Enter" key or the garbage text ("abc")
         while ((c = getchar()) != '\n' && c != EOF);
 
     } while (check != 1); // Loop repeats only if the check failed.
