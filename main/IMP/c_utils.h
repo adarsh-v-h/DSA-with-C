@@ -3,5 +3,6 @@
 
 void getInt(int *data);
 void *safeAllo(int size);
-
+void *parent_node(void *head, void *target);
+void *parent_pos(void *head, int pos);
 #endif
