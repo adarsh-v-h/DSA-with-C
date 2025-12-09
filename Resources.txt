@@ -1,0 +1,8 @@
+You can read what are binary tress here: 
+You can read what are binary search trees here:
+You can read what sparse matrix are here:
+You can read what Linked List is here:
+You can read what Queues are here:
+You can read what Stacks are here:
+You can read about arrays here:
+You can read about MakeFiles here:
