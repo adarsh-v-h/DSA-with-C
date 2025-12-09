@@ -60,4 +60,5 @@ This is currently only for QueueAndLinkedList.c program.<br>
 ---
 
 ## Before you go
-All the programs in here, have bugs, loop holes and can be exploited, but conditions like wrong data input, overflow or underflow conditions. This whole thing is made for jusr understanding, and have a huge space to grow, into better codes.
+All the programs in here, have bugs, loop holes and can be exploited, but conditions like wrong data input, overflow or underflow conditions. This whole thing is made for just understanding, and have a huge space to grow, into better codes. <br>
+You can read more about Data Structures using the links in **Resources.txt**. 

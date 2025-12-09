@@ -1,8 +1,11 @@
-You can read what are binary tress here: 
-You can read what are binary search trees here:
-You can read what sparse matrix are here:
-You can read what Linked List is here:
-You can read what Queues are here:
-You can read what Stacks are here:
-You can read about arrays here:
-You can read about MakeFiles here:
+You can read about arrays here: https://en.wikipedia.org/wiki/Array_(data_structure)
+You can read what Stacks are here: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+You can read what Queues are here: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+You can read about Circular Queues here: https://www.geeksforgeeks.org/dsa/introduction-to-circular-queue/
+You can read what sparse matrix are here: https://en.wikipedia.org/wiki/Sparse_matrix
+You can read what Linked List is here: https://en.wikipedia.org/wiki/Linked_list
+You can read about Circular Linked List here: https://www.geeksforgeeks.org/dsa/circular-linked-list/
+You can read about Doubly Linked List here: https://en.wikipedia.org/wiki/Doubly_linked_list
+You can read what are binary tress here: https://en.wikipedia.org/wiki/Binary_tree
+You can read what are binary search trees here: https://en.wikipedia.org/wiki/Binary_search_tree
+You can read about MakeFiles here: https://makefiletutorial.com
