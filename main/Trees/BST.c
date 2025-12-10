@@ -13,16 +13,20 @@ void postorder(Node*);
 void preorder(Node*);
 void inorder(Node*);
 void deleteTree(Node*);
+Node *search(Node*, int);
+Node *find_min(Node*);
+Node *find_max(Node*);
+Node *delete(Node*, int);
 
 int main(void){
-    Node *root;
-    int ch;
+    Node *root, *ptr;
+    int ch, data;
     root = NULL;
     printf("Creating a tree...\n");
     root = create(root);
     while (1){
         printf("Here are following operation you can perform next: \n");
-        printf("1.Insert\n2.Display\n3.Exit\n:");
+        printf("1.Insert\n2.Display\n3.Perform Binary search on tree\n4.Find minimum value in the tree\n5.Find Maximum value in the tree\n6.Exit\n:");
         getInt(&ch);
         switch (ch){
             case 1:{
@@ -68,6 +72,27 @@ int main(void){
                 break;
             }
             case 3:{
+                printf("Enter the value to be searched: ");
+                getInt(&data);
+                ptr = search(root, data);
+                if(ptr==NULL){
+                    printf("The %d is not found \n",data);
+                }else{
+                    printf("The %d is found at address %p \n", data, &(ptr->data));
+                }
+                break;
+            }
+            case 4:{
+                ptr = find_min(root);
+                printf("The smallest number in the tree is %d \n", ptr->data);
+                break;
+            }
+            case 5:{
+                ptr = find_max(root);
+                printf("The larget number in the tree is %d\n", ptr->data);
+                break;
+            }
+            case 6:{
                 printf("Deleting all nodes... \n");
                 deleteTree(root);
                 printf("Done");
@@ -117,6 +142,63 @@ void insert(Node *root, Node *new){
     }
     // Note: If new->data == root->data, the node is simply ignored (no duplicates)
 }
+Node *search(Node *root, int key){
+    if(root==NULL){
+        return NULL;
+    }else if(key<root->data){
+        return search(root->left, key);
+    }else if(key>root->data){
+        return search(root->right, key);
+    }else{
+        return root;
+    }
+}
+
+Node *find_min(Node *root){
+    if(root==NULL){
+        return root;
+    }else if(root->left==NULL){
+        return root;
+    }else{
+        return(find_min(root->left));
+    }
+}
+
+Node*find_max(Node *root){
+    if(root==NULL){
+        return NULL;
+    }else if(root->right==NULL){
+        return root;
+    }else{
+        return find_max(root->right);
+    }
+}
+
+Node *delete(Node *root, int data){
+    if(root==NULL){
+        return  root;
+    }
+    if(data<root->data){
+        root->left = delete(root->left, data);
+    }else if(data>root->data){
+        root->right= delete(root->right, data);
+    }else{
+        if(root->left==NULL){
+            Node *temp = root->right;
+            free(root);
+            return temp;
+        }else if(root->right==NULL){
+            Node *temp = root->left;
+            free(root);
+            return temp;
+        }
+        Node *temp = find_min(root->right);
+        root->data=temp->data;
+        root->right=delete(root->right, temp->data);
+    }
+    return root;
+}
+
 void inorder(Node *ptr){
     if(ptr){
         if(ptr->left){
