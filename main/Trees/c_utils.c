@@ -2,12 +2,7 @@
 #include <stdlib.h>
 #include "c_utils.h"
 #include <stddef.h>
-#define ERROR_CODE NULL
-
-struct node{
-    int data;
-    struct node *next;
-};
+#include <string.h>
 
 void getInt(int *data) {
     int check;
@@ -30,4 +25,12 @@ void *safeAllo(int size){
         exit(EXIT_FAILURE);
     }
     return ptr;
+}
+
+void safeFree(void *ptr, size_t size) {
+    if (ptr == NULL) {
+        return; 
+    }
+    memset(ptr, 0, size);
+    free(ptr);
 }
