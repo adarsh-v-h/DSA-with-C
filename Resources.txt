@@ -8,4 +8,6 @@ You can read about Circular Linked List here: https://www.geeksforgeeks.org/dsa/
 You can read about Doubly Linked List here: https://en.wikipedia.org/wiki/Doubly_linked_list
 You can read what are binary tress here: https://en.wikipedia.org/wiki/Binary_tree
 You can read what are binary search trees here: https://en.wikipedia.org/wiki/Binary_search_tree
+You can read what are Threaded Binary trees here: https://en.wikipedia.org/wiki/Threaded_binary_tree
+You can read about Hashs/Hash functions/Hash Tables here: https://en.wikipedia.org/wiki/Hash_function , https://en.wikipedia.org/wiki/Hash_table
 You can read about MakeFiles here: https://makefiletutorial.com
